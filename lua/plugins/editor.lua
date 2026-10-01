@@ -55,6 +55,13 @@ return {
       formatters_by_ft = {
         go = { "goimports" },
         lua = { "stylua" },
+        python = { "ruff_format" },
+        javascript = { "prettier" },
+        typescript = { "prettier" },
+        javascriptreact = { "prettier" },
+        typescriptreact = { "prettier" },
+        json = { "prettier" },
+        php = { "pint" },
       },
       default_format_opts = { lsp_format = "fallback" },
       format_on_save = { timeout_ms = 1000 },

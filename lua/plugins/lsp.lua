@@ -18,7 +18,7 @@ return {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     dependencies = { "mason-org/mason.nvim" },
     event = "VeryLazy",
-    opts = { ensure_installed = { "stylua", "goimports" } },
+    opts = { ensure_installed = { "stylua", "goimports", "ruff", "prettier" } },
   },
 
   -- LSP servers: install, configure, enable
@@ -93,7 +93,9 @@ return {
       })
 
       require("mason-lspconfig").setup({
-        ensure_installed = { "gopls", "lua_ls", "ts_ls", "jsonls", "yamlls" },
+        ensure_installed = { "gopls", "lua_ls", "ts_ls", "jsonls", "yamlls",
+            "pyright", "ruff", "intelephense", "eslint" 
+          },
       })
     end,
   },
